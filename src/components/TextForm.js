@@ -54,7 +54,10 @@ export default function TextForm(props) {
   };
   return (
     <>
-      <div className="container pb-2 rounded">
+      <div
+        className="container pb-2 rounded"
+        style={{ color: props.mode === "dark" ? "white" : "black" }}
+      >
         <h1 className="text-center">{props.heading}</h1>
         <div className="mb-3">
           <textarea
@@ -120,21 +123,24 @@ export default function TextForm(props) {
           </button>
         </div>
       </div>
-      <div className="container border bg-light my-3 text-center rounded shadow-lg">
-        <h2>Text Summary</h2>
-        <p>
+      <div className="container border my-3 text-center rounded shadow-lg">
+        <h2 style={{ color: props.mode === "dark" ? "white" : "black" }}>
+          Text Summary
+        </h2>
+        <p style={{ color: props.mode === "dark" ? "white" : "black" }}>
           Currently text has{" "}
-          <span className="text-danger">{text.split(" ").length}</span> Words
-          and <span className="text-danger">{text.length}</span> Characters
+          <span className="text-danger">
+            {text.length > 0 ? text.split(" ").length : 0}
+          </span>{" "}
+          Words and <span className="text-danger">{text.length}</span>{" "}
+          Characters
         </p>
-        <h3>
-          Preview (
+        <h4 style={{ color: props.mode === "dark" ? "white" : "black" }}>
           <span className="text-success">
             {Math.round(0.08 * text.split(" ").length)}
           </span>{" "}
-          Minutes Read)
-        </h3>
-        <p>{text}</p>
+          Minutes Read
+        </h4>
       </div>
     </>
   );
