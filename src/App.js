@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div>
-      <Navbar title="TextUtils" aboutbtn="About Creator" />
+      <Navbar title="AlphaText" aboutbtn="About Creator" />
       <div className="container my-4">
         <TextForm heading="Enter Your Text" />
       </div>
