@@ -61,6 +61,13 @@ export default function TextForm(props) {
         <h1 className="text-center">{props.heading}</h1>
         <div className="mb-3">
           <textarea
+            style={{
+              backgroundColor: props.mode === "dark" ? "grey" : "white",
+              color: props.mode === "dark" ? "white" : "black",
+              cursor: "default",
+              border:
+                props.mode === "dark" ? "2px solid white" : "2px solid black",
+            }}
             className="form-control shadow-lg"
             value={text}
             id="text-box"

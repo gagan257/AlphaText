@@ -28,7 +28,7 @@ function App() {
       <div className="container my-4">
         <TextForm heading="Enter Your Text" mode={mode} />
       </div>
-      <Footer />
+      <Footer mode={mode} />
     </div>
   );
 }
