@@ -3,7 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Footer from "./components/Footer";
-// import About from "./components/About";
+import Developer from "./components/Developer";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState("light");
@@ -18,18 +19,24 @@ function App() {
     }
   };
   return (
-    <div>
-      <Navbar
-        title="AlphaText"
-        aboutbtn="About Creator"
-        mode={mode}
-        toggleMode={toggleMode}
-      />
-      <div className="container my-4">
-        <TextForm heading="Enter Your Text" mode={mode} />
-      </div>
+    <>
+      <Router>
+        <Navbar
+          title="AlphaText"
+          aboutbtn="Developer"
+          mode={mode}
+          toggleMode={toggleMode}
+        />
+        <Routes>
+          <Route
+            path="/"
+            element={<TextForm heading="Enter Your Text" mode={mode} />}
+          />
+          <Route path="/developer" element={<Developer mode={mode} />} />
+        </Routes>
+      </Router>
       <Footer mode={mode} />
-    </div>
+    </>
   );
 }
 

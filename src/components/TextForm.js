@@ -77,14 +77,17 @@ export default function TextForm(props) {
         </div>
 
         <div className="d-flex justify-content-center">
-          <button className="btn btn-success" onClick={handleUpClick}>
+          <button className="btn btn-success shadow-lg" onClick={handleUpClick}>
             Convert to UPPERCASE
           </button>
-          <button className="btn btn-primary mx-2" onClick={handleLoClick}>
+          <button
+            className="btn btn-primary mx-2 shadow-lg"
+            onClick={handleLoClick}
+          >
             Convert to lowercase
           </button>
           <button
-            className="btn btn-warning text-white"
+            className="btn btn-warning text-white shadow-lg"
             onClick={handleExtraSpaces}
           >
             Remove Extra Spaces
@@ -93,13 +96,13 @@ export default function TextForm(props) {
         <div className="d-flex justify-content-center mt-2">
           <button
             onClick={handleCamelCase}
-            className="btn btn-success text-white"
+            className="btn btn-success text-white shadow-lg"
           >
             Convert to Camel Case
           </button>
           <button
             onClick={handleSnakeCase}
-            className="btn btn-info text-white mx-2"
+            className="btn btn-info text-white mx-2 shadow-lg"
           >
             Convert to Snake Case
           </button>
@@ -107,34 +110,43 @@ export default function TextForm(props) {
         <div className="d-flex justify-content-center mt-2">
           <button
             onClick={handleKebabCase}
-            className="btn btn-dark text-white mx-2"
+            className="btn btn-dark text-white mx-2 shadow-lg"
           >
             Convert to kebab-case
           </button>
           <button
             onClick={handleUpperKebabCase}
-            className="btn btn-dark text-white"
+            className="btn btn-dark text-white shadow-lg"
           >
             Convert to UPPER-KEBAB-CASE
           </button>
         </div>
         <div className="d-flex justify-content-center mt-2">
-          <button className="btn btn-danger" onClick={handleDLClick}>
+          <button className="btn btn-danger shadow-lg" onClick={handleDLClick}>
             Delete All
           </button>
           <button
-            className="btn btn-info text-white mx-2"
+            className="btn btn-info text-white mx-2 shadow-lg"
             onClick={handleCPClick}
           >
             Copy All
           </button>
         </div>
       </div>
-      <div className="container border my-3 text-center rounded shadow-lg">
-        <h2 style={{ color: props.mode === "dark" ? "white" : "black" }}>
+      <div
+        className="container my-3 text-center rounded shadow-lg"
+        style={{
+          border: props.mode === "dark" ? "2px solid white" : "2px solid black",
+        }}
+      >
+        <h2
+          style={{
+            color: props.mode === "dark" ? "#212529" : "black",
+          }}
+        >
           Text Summary
         </h2>
-        <p style={{ color: props.mode === "dark" ? "white" : "black" }}>
+        <p style={{ color: props.mode === "dark" ? "#212529" : "black" }}>
           Currently text has{" "}
           <span className="text-danger">
             {text.length > 0 ? text.split(" ").length : 0}
@@ -142,7 +154,7 @@ export default function TextForm(props) {
           Words and <span className="text-danger">{text.length}</span>{" "}
           Characters
         </p>
-        <h4 style={{ color: props.mode === "dark" ? "white" : "black" }}>
+        <h4 style={{ color: props.mode === "dark" ? "#212529" : "black" }}>
           <span className="text-success">
             {Math.round(0.08 * text.split(" ").length)}
           </span>{" "}
