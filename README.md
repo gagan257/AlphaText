@@ -1,10 +1,8 @@
 # AlphaText - Text Manipulator App
 
-
 ## Description
 
 AlphaText is a JavaScript + React web application that empowers users to manipulate text in various formats. The front end is built with React, providing an interactive user interface, while the logical end, powered by JavaScript, handles the text manipulations. Explore the different text formatting options seamlessly with this easy-to-use application.
-
 
 ## Table of Contents
 
@@ -14,8 +12,8 @@ AlphaText is a JavaScript + React web application that empowers users to manipul
 - Frontend
 - Contributing
 
-
 ## Installation
+
 **To install and run AlphaText, follow these steps:**
 
 - Clone the repository:
@@ -35,12 +33,13 @@ AlphaText is a JavaScript + React web application that empowers users to manipul
         npm run start
 
 ## Usage
+
 - Open the 'index.html' file in your preferred web browser.
 - Enter your text in the input field.
 - Choose the desired text manipulation option from the menu.
 - Click the button to see the formatted text.
 
-## Supported Text Manipulations with JS Logics : 
+## Supported Text Manipulations with JS Logics :
 
 - Lowercase
 
@@ -66,7 +65,7 @@ AlphaText is a JavaScript + React web application that empowers users to manipul
         }
         setText(newText.join("_"));
 
-- Kebab-Case 
+- Kebab-Case
 
         let newText = text.split(" ");
         for (let i = 0; i < newText.length; i++) {
@@ -80,6 +79,7 @@ AlphaText is a JavaScript + React web application that empowers users to manipul
             setText(newText.join(" "));
 
 ## Frontend
+
 The frontend of AlphaText is built with React, a popular JavaScript library for building user interfaces. Below, you'll find an overview of the frontend structure and some key components:
 
         |-- AlphaText/
@@ -97,15 +97,15 @@ The frontend of AlphaText is built with React, a popular JavaScript library for 
         |   |   |--
         |   |-- package.json
         |   |-- ...
+
 ## Technologies Used
+
 **React:** The frontend is built using React, allowing for a modular and efficient UI development.
 
 **Bootstrap:** Bootstrap components are utilized for a clean and responsive design, ensuring a user-friendly experience.
 
+**React Router DOM** Allows to make single page Applications.
 
 ## Contributions
 
 -**Feel free to contribute to the development of AlphaText by submitting bug reports, feature requests, or code contributions.**
-
-
-
