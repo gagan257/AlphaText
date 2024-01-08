@@ -1,0 +1,38 @@
+name: Update Contributors
+
+on:
+  workflow_run:
+    workflows: ["Generate Contributors"]
+    types:
+      - completed
+
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update contributors
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { execSync } = require('child_process');
+            const fs = require('fs');
+
+            const contributors = execSync('git log --format="%aN" | sort -u')
+              .toString()
+              .trim()
+              .split('\n')
+              .map((contributor) => `- ${contributor}`);
+
+            const readmePath = 'README.md';
+            const readmeContent = fs.readFileSync(readmePath, 'utf-8');
+            const updatedReadme = readmeContent.replace(
+              /<!-- CONTRIBUTORS_START -->(.|\n)*<!-- CONTRIBUTORS_END -->/,
+              `<!-- CONTRIBUTORS_START -->\n${contributors.join('\n')}\n<!-- CONTRIBUTORS_END -->`
+            );
+
+            fs.writeFileSync(readmePath, updatedReadme);
