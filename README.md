@@ -109,3 +109,6 @@ The frontend of AlphaText is built with React, a popular JavaScript library for 
 ## Contributions
 
 -**Feel free to contribute to the development of AlphaText by submitting bug reports, feature requests, or code contributions.**
+
+<!-- CONTRIBUTORS_START -->
+<!-- CONTRIBUTORS_END -->
