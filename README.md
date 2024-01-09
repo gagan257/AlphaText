@@ -112,14 +112,14 @@ The frontend of AlphaText is built with React, a popular JavaScript library for 
 
 <!-- CONTRIBUTORS_START -->
 
-## Our Contributors : 
+## Our Contributors :
 
 <table>
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://gagan257.tech/"><img src="https://avatars.githubusercontent.com/u/93324279?v=4" width="100px;" alt="Gagan-image" border="8px" /><br /><sub><b>Gagan Arora</b></sub></a><br />Admin</td>
-      <td align="center" valign="top" width="14.28%"><a href="https://codebykrisna.netlify.app/"><img src="https://avatars.githubusercontent.com/u/112065383?s=40&v=4" width="100px;" alt="Krishna-image" border="8px"/><br /><sub><b>Krishna Rajput</b></sub></a><br />Documentation</td>
-      <td align="center" valign="top" width="14.28%"><a href="https://gagan257.tech/"><img src="https://avatars.githubusercontent.com/u/129546652?v=4" width="100px;" alt="Noval-image" border="8px"/><br /><sub><b>Noval Great</b></sub></a><br />Co-Admin</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://codebykrisna.netlify.app/"><img src="https://avatars.githubusercontent.com/u/112065383?s=40&v=4" width="100px;" alt="Krishna-image" border="8px"/><br /><sub><b>Krishna Rajput</b></sub></a><br />Documentation & Manager</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://gagan257.tech/"><img src="https://avatars.githubusercontent.com/u/129546652?v=4" width="100px;" alt="Noval-image" border="8px"/><br /><sub><b>NovalGreat</b></sub></a><br />Tester</td>
     </tr>
    </tbody>
 </table>
